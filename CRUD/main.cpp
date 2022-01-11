@@ -93,16 +93,18 @@ Nasabah readData(fstream &data, int posisi){
 void displayDataNasabah(fstream &data){
 	int size = getDataSize(data);
 	Nasabah showNasabah;
-	cout << "no.\tID.\tNama.\tAlamat.\t\tJ.Kelamin.\tTanggal Lahir" << endl;
+	cout << "no.\tID.\tNama\t\tStatus.\t\tJ.Kelamin.\tTanggal Lahir\tAlamat." << endl;
+	cout << "================================================================================================"<< endl;
 	for(int i = 1; i <= size; i++){
 		showNasabah = readData(data,i);
 		cout << i << "\t";
 		cout << showNasabah.id << "\t";
-		cout << showNasabah.nama << "\t";
-		cout << showNasabah.alamat << "\t\t";
-		cout << showNasabah.status << "\t";
+		cout << showNasabah.nama << "\t\t";
+		cout << showNasabah.status << "\t\t";
 		cout << showNasabah.jenkel << "\t";
-		cout << showNasabah.tanggal << endl;
+		cout << showNasabah.tanggal << "\t";
+		cout << showNasabah.alamat << endl;
+	cout << "================================================================================================"<< endl;
 	}
 }
 
